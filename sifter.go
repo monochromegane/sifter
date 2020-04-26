@@ -369,6 +369,9 @@ func hash(k, l int, s string) []int64 {
 	return hashs
 }
 
+// Refs:
+// - Kirsch, Adam, and Michael Mitzenmacher. "Less hashing, same performance: building a better bloom filter." European Symposium on Algorithms. Springer, Berlin, Heidelberg, 2006.
+// - (Implementation of Go) https://cipepser.hatenablog.com/entry/2017/02/04/090629
 func calcMD5Hash(str string) string {
 	hasher := md5.New()
 	hasher.Write([]byte(str))
